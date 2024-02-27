@@ -10,7 +10,7 @@ pipeline {
             steps {
                 echo 'Git clone'
                 git url: 'https://github.com/hoaineun/spring-petclinic.git',
-                branch: 'wavefront'
+                branch: 'wavefront', credentialsId: 'github_access_token'
             }
         }
         stage('Build') {
