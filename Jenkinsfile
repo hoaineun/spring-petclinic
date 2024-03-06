@@ -68,7 +68,6 @@ pipeline {
                 }
             }
         }
-        /*
         stage('Clean Up Docker Images on Jenkins Server') {
             steps {
                 echo 'Cleaning up unused Docker images on Jenkins server'
@@ -77,6 +76,7 @@ pipeline {
                 sh "docker image prune -f --all --filter \"until=1h\""
             }
         }
+         /*
         stage('Upload to S3') {
             steps {
                 echo "Upload to S3"
